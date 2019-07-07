@@ -1,0 +1,4 @@
+#!/bin/sh
+
+install -g mob -m 750 acl-repos /usr/local/bin
+ln -fs acl-repos /usr/local/bin/unacl-repos

@@ -1,0 +1,11 @@
+#
+# cgit config
+# see cgitrc(5) for details
+
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
+
+css=/cgit-css/cgit.css
+logo=/cgit-css/cgit.png
+
+scan-path=/repos
+max-repo-count=10000

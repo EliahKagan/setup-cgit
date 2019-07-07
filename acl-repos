@@ -1,0 +1,38 @@
+#!/bin/sh
+# acl-repos - Adds ACLs to /repos so www-data can read everything.
+# unacl-repos - Removes _all_ ACLs from the /repos directory.
+
+set -f 
+
+msg() {
+    printf '%s: %s: %s\n' "$0" "$1" "$2" >&2
+}
+
+warn() {
+    msg 'warning' "$1"
+}
+
+die() {
+    msg 'error' "$1"
+    exit 1
+}
+
+if ! euid="$(id -u)"; then
+    # If id failed, its empty output would compare equal to zero.
+    warn "id failed with exit code $?, not sure if you're the superuser"
+elif [ "$euid" -ne 0 ]; then
+    warn 'you are not the superuser, this will probably fail'
+fi
+
+case "$(basename "$0")" in
+acl-repos)
+    setfacl -Rdm u:www-data:rx /repos
+    setfacl -Rm u:www-data:rx /repos
+    ;;
+unacl-repos)
+    setfacl -Rbn /repos
+    ;;
+*)
+    die 'this utility must be named "acl-repos" or "unacl-repos"'
+    ;;
+esac

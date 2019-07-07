@@ -41,4 +41,4 @@ set -e
 acl-repos
 ./deploy-redirect
 
-printf 'The setup seems to have succeeded. Try visiting http://localhost/cgit.\n'
+printf 'It all seems to have worked. Try visiting http://localhost/cgit.\n'

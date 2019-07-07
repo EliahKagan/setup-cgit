@@ -6,6 +6,8 @@ the cgit web interface, accessible at `http://HOST/cgit` where `HOST` is replace
 by a domain name, hostname, or IP address through which the HTTP server on this
 system may be accessed.
 
+Backing up the existing `/etc/cgitrc` first would be a good idea.
+
 Syntax highlighting is provided by pygments. The `python3-pygments` packages
 should be installed. I've used pygments instead of highlight because pygments
 works out of the box with files that have no suffix and whose language must

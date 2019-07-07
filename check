@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for f in *; do
+    if [ -x "$f" ] && head -n 1 -- "$f" | grep -qE '^#!.*sh(?:[[:blank:]]|$)'
+    then
+        printf 'Checking %s for errors.\n' "$f"
+        shellcheck -- "$f"
+    fi
+done

@@ -1,0 +1,44 @@
+#!/bin/sh
+
+set -f
+
+msg() {
+    printf '%s: %s: %s\n' "$0" "$1" "$2" >&2
+}
+
+warn() {
+    msg 'warning' "$1"
+}
+
+die() {
+    msg 'error' "$1"
+    exit 1
+}
+
+if [ "$#" -eq 0 ]; then
+    {
+        curdir="$(realpath .)" &&
+        scriptdir="$(realpath "$(dirname "$0")")" &&
+        [ "$curdir" = "$scriptdir" ]
+    } || die 'script not in CWD (use -f to force)'
+
+    {
+        euid="$(id -u)" && [ "$euid" -eq 0 ]
+    } || die 'script not run as root (use -f to force)'
+elif [ "$#" -ne 1 ]; then
+    die 'too many arguments'
+elif [ "$1" = '-f' ]; then
+    warn 'not comparing CWD to script location'
+else
+    die "spurious argument \"$1\"" 
+fi
+
+set -e
+
+./install-services
+./deploy-cgitrc
+./deploy-acl-repos
+acl-repos
+./deploy-redirect
+
+printf 'The setup seems to have succeeded. Try visiting http://localhost/cgit.\n'

@@ -3,11 +3,11 @@ installation and configuration of cgit that works well for me in the
 undemanding environment of a web server that is not directly accessible on the
 public internet and that has only a handful of users.
 
-They can be run individually, or all together by just running `./setup-all`.
+The scripts be run individually, or all together by just running `./setup-all`.
 **They should all be run from the directory in which they reside** unless you
 *really* know what you are doing. They look in the current directory to find
-the scripts they run, so unless you're deliberately making them run different
-scripts instead, you should make sure to `cd` to the directory they're in. For
+the files they use, so unless you're deliberately making them use different
+files instead, you should make sure to `cd` to the directory they're in. For
 example, `cd /path/to/this/repo` followed by `./setup-all` would do the right
 thing (but `/path/to/this/repo/setup-all` would do the wrong thing).
 

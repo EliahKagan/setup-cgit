@@ -1,3 +1,2 @@
-acl-repos text eol=lf
-deploy-acl-repos text eol=lf
-deploy-redirect text eol=lf
+/acl-repos text eol=lf
+/deploy-* text eol=lf

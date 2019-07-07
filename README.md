@@ -7,7 +7,7 @@ by a domain name, hostname, or IP address through which the HTTP server on this
 system may be accessed.
 
 Backing up the existing `/etc/cgitrc` first would be a good idea. One way to
-achieve this is to run `./deploy-cgitrc` to perform the copying, as it bakcs up
+achieve this is to run `./deploy-cgitrc` to perform the copying, as it backs up
 the old file unless the files are the same (in which case no backup is made, to
 avoid overwriting an existing backup with a a copy of the current file).
 

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+rc='cgitrc'
+
+if cmp -s "/etc/$rc" "$rc"; then
+    printf '%s: note: %s is unchanged, not copying\n' "$0" "$rc" >&2
+    exit 0
+fi
+
+install -bS.old -m 644 "$rc" /etc/

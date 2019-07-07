@@ -6,12 +6,20 @@ the cgit web interface, accessible at `http://HOST/cgit` where `HOST` is replace
 by a domain name, hostname, or IP address through which the HTTP server on this
 system may be accessed.
 
-Backing up the existing `/etc/cgitrc` first would be a good idea.
+Backing up the existing `/etc/cgitrc` first would be a good idea. One way to
+achieve this is to run `./deploy-cgitrc` to perform the copying, as it bakcs up
+the old file unless the files are the same (in which case no backup is made, to
+avoid overwriting an existing backup with a a copy of the current file).
 
 Syntax highlighting is provided by pygments. The `python3-pygments` packages
 should be installed. I've used pygments instead of highlight because pygments
 works out of the box with files that have no suffix and whose language must
 therefore be inferred from their hashbangs.
+
+A `README.md` at the root of a repository is used as documentation. This isn't
+really robust enough; ideally, a variety of files could serve the purpose, and
+tie-breaking would distinguish which were best. (This can be done but I haven't
+written the configuration for it.)
 
 All repositories are listed on one page, unless there's a huge lot of them.
 

@@ -15,7 +15,7 @@ I learned some of the techniques used and described here from
 [Floating Octothorpe](https://f-o.org.uk/about.html), especially:
 
 - [Setting up cgit on Debian](https://f-o.org.uk/2017/setting-up-cgit-on-debian.html)
-- [Markdown readme files in cgit](https://f-o.org.uk/2018/markdown-readme-files-in-cgit.html).
+- [Markdown readme files in cgit](https://f-o.org.uk/2018/markdown-readme-files-in-cgit.html)
 
 *Eliah Kagan*
 

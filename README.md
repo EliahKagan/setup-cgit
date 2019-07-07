@@ -31,7 +31,7 @@ Neither of these commands is expected to succeed except when run as root.
 
 ### `redirect.conf`
 
-Runing `./deploy-redirect` as root installs `redirect.conf` as a configuration
+Running `./deploy-redirect` as root installs `redirect.conf` as a configuration
 file for the Apache2 web server and enables it.
 
 This configuration file redirects traffic from the root of the web server to

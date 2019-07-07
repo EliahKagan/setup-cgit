@@ -5,7 +5,8 @@
 css=/cgit-css/cgit.css
 logo=/cgit-css/cgit.png
 
-readme=README.md
+readme=:README.md
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
 source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
 
 scan-path=/repos

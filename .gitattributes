@@ -1,2 +1,3 @@
 /acl-repos text eol=lf
 /deploy-* text eol=lf
+/install-services text eol=lf

@@ -25,14 +25,14 @@ The remainder of this document describes the individual steps that should be
 taken to set up cgit. It is organized by the files in this repository that
 relate to each step.
 
-### Installing the services
+## Installing the services
 
 cgit needs git and a web server. Other software comes in handy to provide
 syntax highlighting. Running `./install-services` installs packages for all
 this and performs site-nonspecific configuration. cgid is enabled for
 performance. Debian or a derviative (such as Ubuntu) is assumed.
 
-### `cgitrc`
+## The `cgitrc` configuration file for cgit
 
 Copy `cgitrc` to `/etc` as root to replace the existing cgit configuration with
 an arrangement where repositories in `/repos` are automatically browseable via
@@ -57,7 +57,7 @@ written the configuration for it.)
 
 All repositories are listed on one page, unless there's a huge lot of them.
 
-### `acl-repos`
+## The `acl-repos` and `unacl-repos` commands
 
 Running `./deploy-acl-repos` as root places `acl-repos` and `unacl-repos`
 commands in `/usr/local/bin`.
@@ -73,7 +73,7 @@ previous run of `acl-repos`.
 
 Neither of these commands is expected to succeed except when run as root.
 
-### `redirect.conf`
+## The `redirect.conf` confuration file for Apache
 
 Running `./deploy-redirect` as root installs `redirect.conf` as a configuration
 file for the Apache2 web server and enables it.

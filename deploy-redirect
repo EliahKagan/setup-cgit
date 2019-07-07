@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+install -m 644 redirect.conf /etc/apache2/conf-available/
+ln -fs ../conf-available/redirect.conf /etc/apache2/conf-enabled/redirect.conf

@@ -28,3 +28,12 @@ may include ACLs that have nothing to do with those created or changed by a
 previous run of `acl-repos`.
 
 Neither of these commands is expected to succeed except when run as root.
+
+### `redirect.conf`
+
+Runing `./deploy-redirect` as root installs `redirect.conf` as a configuration
+file for the Apache2 web server and enables it.
+
+This configuration file redirects traffic from the root of the web server to
+the `cgit` directory. Note that it does *not* prevents files in the root or
+elsewhere from being accessed by a correct URL, if they otherwise could.

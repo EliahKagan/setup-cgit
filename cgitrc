@@ -5,7 +5,7 @@
 # general layout/appearance and documentation
 css=/cgit-css/cgit.css
 logo=/cgit-css/cgit.png
-root-title=cgit on Kip (the "production" server)
+root-title=cgit on Zim (the test server)
 root-readme=/var/www/html/about-cgit.md
 
 # how individual repositories, and their contents, are displayed

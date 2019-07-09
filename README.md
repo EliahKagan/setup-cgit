@@ -45,7 +45,7 @@ achieve this is to run `./deploy-cgitrc` to perform the copying, as it backs up
 the old file unless the files are the same (in which case no backup is made, to
 avoid overwriting an existing backup with a a copy of the current file).
 
-Syntax highlighting is provided by pygments. The `python3-pygments` packages
+Syntax highlighting is provided by pygments. The `python3-pygments` package
 should be installed. I've used pygments instead of highlight because pygments
 works out of the box with files that have no suffix and whose language must
 therefore be inferred from their hashbangs.

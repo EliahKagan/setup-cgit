@@ -2,12 +2,15 @@
 # cgit config
 # see cgitrc(5) for details
 
+# general layout/appearance
 css=/cgit-css/cgit.css
 logo=/cgit-css/cgit.png
 
+# how individual repositories, and their contents, are displayed
 readme=:README.md
 about-filter=/usr/lib/cgit/filters/about-formatting.sh
 source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
 
+# how the list of repositories is found and displayed
 scan-path=/repos
 max-repo-count=10000

@@ -30,13 +30,14 @@ elif [ "$#" -ne 1 ]; then
 elif [ "$1" = '-f' ]; then
     warn 'not comparing CWD to script location'
 else
-    die "spurious argument \"$1\"" 
+    die "spurious argument \"$1\""
 fi
 
 set -e
 
 ./install-services
 ./deploy-cgitrc
+./deploy-about-cgit
 ./deploy-acl-repos
 acl-repos
 ./deploy-redirect

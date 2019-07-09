@@ -1,0 +1,2 @@
+#!/bin/sh
+install -m  644 about-cgit.md /var/www/html/

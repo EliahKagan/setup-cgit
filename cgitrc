@@ -2,9 +2,10 @@
 # cgit config
 # see cgitrc(5) for details
 
-# general layout/appearance
+# general layout/appearance and documentation
 css=/cgit-css/cgit.css
 logo=/cgit-css/cgit.png
+root-readme=/var/www/html/about-cgit.md
 
 # how individual repositories, and their contents, are displayed
 readme=:README.md

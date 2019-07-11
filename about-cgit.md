@@ -2,7 +2,7 @@
 
 This is the cgit interface running on the development git server.
 
-Apok (this server) is used for development -- that is, development of the cgit
+Apok (this server) is used for development—that is, development of the cgit
 instance. It is not the "production" server, not even with the air quotes. Even
 if everything works perfectly, the repositories on this server are not current.
 They are a stale snapshot.

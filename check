@@ -1,8 +1,11 @@
 #!/bin/sh
 
+looks_like_shell_script() {
+    head -n 1 -- "$f" | grep -qE '^#!.*sh(?:[[:blank:]]|$)'
+}
+
 for f in *; do
-    if [ -x "$f" ] && head -n 1 -- "$f" | grep -qE '^#!.*sh(?:[[:blank:]]|$)'
-    then
+    if [ -f "$f" ] && [ -x "$f" ] && looks_like_shell_script "$f"; then
         printf 'Checking %s for errors.\n' "$f"
         shellcheck -- "$f"
     fi

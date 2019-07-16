@@ -29,8 +29,6 @@ I learned some of the techniques used and described here from
 - [Setting up cgit on Debian](https://f-o.org.uk/2017/setting-up-cgit-on-debian.html)
 - [Markdown readme files in cgit](https://f-o.org.uk/2018/markdown-readme-files-in-cgit.html)
 
-*Eliah Kagan*
-
 ----
 
 The remainder of this document describes the individual steps that should be

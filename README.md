@@ -1,3 +1,15 @@
+# setup-cgit - *unofficial cgit how-to and scripts*
+
+*Written in 2019 by Eliah Kagan \<degeneracypressure@gmail.com\>.*
+
+*To the extent possible under law, the author(s) have dedicated all copyright
+and related and neighboring rights to this software to the public domain
+worldwide. This software is distributed without any warranty.*
+
+*You should have received a copy of the CC0 Public Domain Dedication along with
+this software. If not, see
+<http://creativecommons.org/publicdomain/zero/1.0/>.*
+
 The scripts and associated files in this repository automate and document the
 installation and configuration of cgit that works well for me in the
 undemanding environment of a web server that is not directly accessible on the
@@ -43,7 +55,7 @@ system may be accessed.
 Backing up the existing `/etc/cgitrc` first would be a good idea. One way to
 achieve this is to run `./deploy-cgitrc` to perform the copying, as it backs up
 the old file unless the files are the same (in which case no backup is made, to
-avoid overwriting an existing backup with a a copy of the current file).
+avoid overwriting an existing backup with a copy of the current file).
 
 Syntax highlighting is provided by pygments. The `python3-pygments` packages
 should be installed. I've used pygments instead of highlight because pygments

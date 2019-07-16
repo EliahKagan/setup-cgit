@@ -1,8 +1,21 @@
 #!/bin/sh
+#
 # acl-repos - Adds ACLs to /repos so www-data can read everything.
 # unacl-repos - Removes _all_ ACLs from the /repos directory.
+#
+# This file is part of setup-cgit, an unofficial cgit how-to and scripts.
+#
+# Written in 2019 by Eliah Kagan <degeneracypressure@gmail.com>.
+#
+# To the extent possible under law, the author(s) have dedicated all copyright
+# and related and neighboring rights to this software to the public domain
+# worldwide. This software is distributed without any warranty.
+#
+# You should have received a copy of the CC0 Public Domain Dedication along
+# with this software. If not, see
+# <http://creativecommons.org/publicdomain/zero/1.0/>.
 
-set -f 
+set -f
 
 msg() {
     printf '%s: %s: %s\n' "$0" "$1" "$2" >&2

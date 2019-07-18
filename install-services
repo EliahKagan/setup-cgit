@@ -18,9 +18,10 @@ set -e
 
 apt update
 
-# Install all the packages that are likely to need to be installed, plus
-# highlight so that it can be used as an alternative to pygments.
-apt install apache2 cgit git highlight python3-docutils python3-markdown \
+# Install all the packages that are likely to need to be installed for these
+# scripts and cgit, plus highlight so that it can be used as an alternative to
+# pygments.
+apt install acl apache2 cgit git highlight python3-docutils python3-markdown \
         python3-pygments
 
 a2enconf -q cgit # Installing cgit may have done this already, but that's okay.

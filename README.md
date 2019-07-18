@@ -15,11 +15,11 @@ installation and configuration of cgit that works well for me in the
 undemanding environment of a web server that is not directly accessible on the
 public internet and that has only a handful of users.
 
-They can be run individually, or all together by just running `./setup-all`.
+The scripts be run individually, or all together by just running `./setup-all`.
 **They should all be run from the directory in which they reside** unless you
 *really* know what you are doing. They look in the current directory to find
-the scripts they run, so unless you're deliberately making them run different
-scripts instead, you should make sure to `cd` to the directory they're in. For
+the files they use, so unless you're deliberately making them use different
+files instead, you should make sure to `cd` to the directory they're in. For
 example, `cd /path/to/this/repo` followed by `./setup-all` would do the right
 thing (but `/path/to/this/repo/setup-all` would do the wrong thing).
 
@@ -27,7 +27,7 @@ I learned some of the techniques used and described here from
 [Floating Octothorpe](https://f-o.org.uk/about.html), especially:
 
 - [Setting up cgit on Debian](https://f-o.org.uk/2017/setting-up-cgit-on-debian.html)
-- [Markdown readme files in cgit](https://f-o.org.uk/2018/markdown-readme-files-in-cgit.html).
+- [Markdown readme files in cgit](https://f-o.org.uk/2018/markdown-readme-files-in-cgit.html)
 
 ----
 
@@ -35,14 +35,14 @@ The remainder of this document describes the individual steps that should be
 taken to set up cgit. It is organized by the files in this repository that
 relate to each step.
 
-### Installing the services
+## Installing the services
 
 cgit needs git and a web server. Other software comes in handy to provide
 syntax highlighting. Running `./install-services` installs packages for all
 this and performs site-nonspecific configuration. cgid is enabled for
 performance. Debian or a derviative (such as Ubuntu) is assumed.
 
-### `cgitrc`
+## The `cgitrc` configuration file for cgit
 
 Copy `cgitrc` to `/etc` as root to replace the existing cgit configuration with
 an arrangement where repositories in `/repos` are automatically browseable via
@@ -55,7 +55,7 @@ achieve this is to run `./deploy-cgitrc` to perform the copying, as it backs up
 the old file unless the files are the same (in which case no backup is made, to
 avoid overwriting an existing backup with a copy of the current file).
 
-Syntax highlighting is provided by pygments. The `python3-pygments` packages
+Syntax highlighting is provided by pygments. The `python3-pygments` package
 should be installed. I've used pygments instead of highlight because pygments
 works out of the box with files that have no suffix and whose language must
 therefore be inferred from their hashbangs.
@@ -67,7 +67,7 @@ written the configuration for it.)
 
 All repositories are listed on one page, unless there's a huge lot of them.
 
-### `acl-repos`
+## The `acl-repos` and `unacl-repos` commands
 
 Running `./deploy-acl-repos` as root places `acl-repos` and `unacl-repos`
 commands in `/usr/local/bin`.
@@ -83,7 +83,7 @@ previous run of `acl-repos`.
 
 Neither of these commands is expected to succeed except when run as root.
 
-### `redirect.conf`
+## The `redirect.conf` confuration file for Apache
 
 Running `./deploy-redirect` as root installs `redirect.conf` as a configuration
 file for the Apache2 web server and enables it.

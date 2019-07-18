@@ -12,12 +12,17 @@
 # with this software. If not, see
 # <http://creativecommons.org/publicdomain/zero/1.0/>.
 
+# general layout/appearance and documentation
 css=/cgit-css/cgit.css
 logo=/cgit-css/cgit.png
+root-title=cgit on Kip (the "production" server)
+root-readme=/var/www/html/about-cgit.md
 
+# how individual repositories, and their contents, are displayed
 readme=:README.md
 about-filter=/usr/lib/cgit/filters/about-formatting.sh
 source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
 
+# how the list of repositories is found and displayed
 scan-path=/repos
 max-repo-count=10000

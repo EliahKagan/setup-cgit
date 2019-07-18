@@ -51,6 +51,7 @@ set -e
 
 ./install-services
 ./deploy-cgitrc
+./deploy-about-cgit
 ./deploy-acl-repos
 acl-repos
 ./deploy-redirect

@@ -67,6 +67,15 @@ written the configuration for it.)
 
 All repositories are listed on one page, unless there's a huge lot of them.
 
+## `about-cgit.md`
+
+Place this in `/var/www/html` (or wherever its location is specified in
+`cgitrc`) to create an *about* tab on the main page with the contents of the
+file rendered in it. Running `./deploy-about-cgit` as root (or some other user
+wit write access in `/var/www/html`) will do this.
+
+Or remove or comment out the `root-readme` line in `cgitrc`.
+
 ## The `acl-repos` and `unacl-repos` commands
 
 Running `./deploy-acl-repos` as root places `acl-repos` and `unacl-repos`

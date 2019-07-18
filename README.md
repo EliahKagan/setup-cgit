@@ -8,7 +8,7 @@ worldwide. This software is distributed without any warranty.*
 
 *You should have received a copy of the CC0 Public Domain Dedication along with
 this software. If not, see
-<https://creativecommons.org/publicdomain/zero/1.0/>.*
+<http://creativecommons.org/publicdomain/zero/1.0/>.*
 
 The scripts and associated files in this repository automate and document the
 installation and configuration of cgit that works well for me in the

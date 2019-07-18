@@ -1,4 +1,4 @@
-# setup-cgit - unofficial cgit how-to and scripts
+# setup-cgit - *unofficial cgit how-to and scripts*
 
 *Written in 2019 by Eliah Kagan \<degeneracypressure@gmail.com\>.*
 

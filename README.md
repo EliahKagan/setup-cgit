@@ -41,7 +41,7 @@ relate to each step.
 cgit needs git and a web server. Other software comes in handy to provide
 syntax highlighting. Running `./install-services` installs packages for all
 this and performs site-nonspecific configuration. cgid is enabled for
-performance. Debian or a derviative (such as Ubuntu) is assumed.
+performance. Debian or a derivative (such as Ubuntu) is assumed.
 
 ## The `cgitrc` configuration file for cgit
 
@@ -93,7 +93,7 @@ previous run of `acl-repos`.
 
 Neither of these commands is expected to succeed except when run as root.
 
-## The `redirect.conf` confuration file for Apache
+## The `redirect.conf` configuration file for Apache
 
 Running `./deploy-redirect` as root installs `redirect.conf` as a configuration
 file for the Apache2 web server and enables it.

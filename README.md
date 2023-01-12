@@ -25,10 +25,10 @@ would do the right thing (but `/path/to/this/repo/setup-all` would do the wrong
 thing).
 
 I learned some of the techniques used and described here from
-[Floating Octothorpe](https://f-o.org.uk/about.html), especially:
+[Floating Octothorpe](https://floatingoctothorpe.uk/about.html), especially:
 
-- [Setting up cgit on Debian](https://f-o.org.uk/2017/setting-up-cgit-on-debian.html)
-- [Markdown readme files in cgit](https://f-o.org.uk/2018/markdown-readme-files-in-cgit.html)
+- [Setting up cgit on Debian](https://floatingoctothorpe.uk/2017/setting-up-cgit-on-debian.html)
+- [Markdown readme files in cgit](https://floatingoctothorpe.uk/2018/markdown-readme-files-in-cgit.html)
 
 ----
 
